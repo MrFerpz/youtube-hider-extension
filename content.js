@@ -2,6 +2,11 @@
     'use strict';
 
     function hideSuggestions() {
+        // Skip hiding anything if we're on a video page to preserve video player functionality
+        if (window.location.href.startsWith('www.youtube.com/watch')) {
+            return;
+        }
+
         const selectors = [
             '#contents.ytd-rich-grid-renderer',
             'ytd-rich-grid-renderer',
