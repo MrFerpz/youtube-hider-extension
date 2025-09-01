@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Suggestion Hider",
+  "version": "1.0",
+  "description": "Block YouTube home page suggestions to reduce distractions",
+  "permissions": [
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "action": {
+    "default_title": "YouTube Suggestion Hider"
+  }
+}
